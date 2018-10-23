@@ -3,7 +3,13 @@ import { renderToString } from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
 import juice from 'juice'
 
-const HtmlTemplate = ({ body, styles, title }: any) => `
+interface HtmlTemplateProps {
+  body: string
+  styles: string
+  title: string
+}
+
+const HtmlTemplate = ({ body, styles, title }: HtmlTemplateProps) => `
 <!DOCTYPE html>
   <html>
     <head>
@@ -16,7 +22,10 @@ const HtmlTemplate = ({ body, styles, title }: any) => `
 </html>
 `
 
-const emailify = <T extends {}>(Component: React.ComponentType<T>) => (props: T, title: string) => {
+const emailify = <T extends {}>(Component: React.ComponentType<T>) => (
+  props: T,
+  title: string,
+) => {
   const sheet = new ServerStyleSheet()
 
   const body = renderToString(sheet.collectStyles(<Component {...props} />))
