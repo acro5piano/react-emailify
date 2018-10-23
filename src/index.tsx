@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { renderToString } from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
-import * as juice from 'juice'
+import juice from 'juice'
 
 const HtmlTemplate = ({ body, styles, title }: any) => `
 <!DOCTYPE html>
