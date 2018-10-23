@@ -1,0 +1,18 @@
+{
+  "name": "examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-emailify": "^0.0.1",
+    "styled-components": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "@types/styled-components": "^4.0.1",
+    "typescript": "^3.1.3"
+  }
+}

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import emailify from '../src'
+import emailify from 'react-emailify'
 
 interface Props {
   message: string
