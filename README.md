@@ -43,9 +43,9 @@ const emailTemplate = emailify(Template)
 
 // Here we compile React Compnent to string
 // by invoking emailify HOC with template vars and title.
-const message = 'Hello World'
-const title = 'Hi from React Emailify'
-const emailString = emailTemplate({ message }, title)
+const emailString = emailTemplate({ 
+  message: 'Hello World'
+}, 'Hi from React Emailify')
 
 console.log(emailString)
 
